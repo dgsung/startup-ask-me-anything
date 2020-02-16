@@ -8,9 +8,33 @@
     <h1>
       Startup, Ask Me Anything!
     </h1>
-    <div id="the-basics">
-      <input class="typeahead" type="text" placeholder="States of USA" />
-    </div>
+
+    <form
+      action="https://v2-api.sheety.co/1dd5fe6f5582ddb6f52e161c3a0d1d6f/startupAskMeAnything/surveys"
+      id="frm"
+    >
+      <div>
+        <input name="name" type="text" placeholder="내 이름" />
+      </div>
+      <div id="the-basics">
+        <input
+          class="typeahead"
+          name="to"
+          type="text"
+          placeholder="창업가 이름"
+        />
+      </div>
+      <div>
+        <input name="content" type="text" placeholder="질문 내용" />
+      </div>
+      <div>
+        <input
+          type="button"
+          onclick="document.getElementById('frm').submit();"
+          value="전송"
+        />
+      </div>
+    </form>
     <script>
       console.log("test!");
       var substringMatcher = function(strs) {
